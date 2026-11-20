@@ -1,0 +1,20 @@
+/* Chamfered tiles and four-point junctions, inspired by the supplied WebP.
+   All decoration is behind the intro. The form keeps its own opaque surface. */
+:root { --grid-line:#8793a8; --grid-hot:#b9c9ed; --grid-fill:#c0cde7; --grid-opacity:.6; }
+:root[data-theme="light"] { --grid-line:#7c899e; --grid-hot:#52668e; --grid-fill:#7e90b3; --grid-opacity:.52; }
+.hero-grid { position:absolute; z-index:-1; top:calc(-1 * var(--header-height)); left:calc(50% - 50vw); width:100vw; height:var(--hero-grid-height,640px); overflow:hidden; pointer-events:none; user-select:none; opacity:var(--grid-opacity); --grid-mask:radial-gradient(ellipse 64% 80% at 100% 8%,#000 8%,transparent 76%),radial-gradient(ellipse 58% 60% at 0% 76%,#000 4%,transparent 78%); -webkit-mask-image:var(--grid-mask); mask-image:var(--grid-mask); -webkit-mask-composite:source-over; mask-composite:add; }
+.hero-grid-svg { display:block; width:100%; height:100%; overflow:visible; color:var(--grid-line); --grid-edge-fade:linear-gradient(to bottom,transparent,#000 10%,#000 55%,transparent 98%); -webkit-mask-image:var(--grid-edge-fade); mask-image:var(--grid-edge-fade); }
+.hero-grid-cell { --heat:0; }
+.hero-grid-tile { fill:var(--grid-fill); fill-opacity:calc(var(--heat) * .025); stroke:var(--grid-line); stroke-width:.85; stroke-opacity:calc(.16 + var(--heat) * .46); transition:fill-opacity .55s ease-out,stroke-opacity .55s ease-out,stroke .25s ease; }
+.hero-grid-cell[data-illuminated] .hero-grid-tile { stroke:var(--grid-hot); transition-duration:.12s; }
+.hero-grid-junction { fill:var(--grid-hot); fill-opacity:calc(.1 + var(--heat) * .5); transition:fill-opacity .65s ease-out; }
+.hero-grid-cell[data-illuminated] .hero-grid-junction { transition-duration:.1s; }
+.hero-grid-fallback { fill:none; stroke:currentColor; stroke-width:.85; opacity:.16; }
+.hero-grid-fallback-junction { fill:currentColor; stroke:none; }
+@media (max-width:767px) {
+  .hero-grid { height:var(--hero-grid-height,760px); --grid-mask:radial-gradient(ellipse 78% 68% at 100% 5%,#000 3%,transparent 78%),radial-gradient(ellipse 76% 64% at 0% 78%,#000 3%,transparent 80%); }
+  .hero-grid-junction { transform:scale(.72); }
+}
+@media (prefers-reduced-motion:reduce) {
+  .hero-grid-tile,.hero-grid-junction { transition:none!important; }
+}
