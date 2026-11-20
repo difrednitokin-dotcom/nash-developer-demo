@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<symbol id="menu" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M4 6l16 0" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M4 12l16 0" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M4 18l16 0" />
+</symbol>
+<symbol id="close" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M18 6l-12 12" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M6 6l12 12" />
+</symbol>
+<symbol id="grid" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M5 4h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M5 16h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M15 12h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M15 4h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" />
+</symbol>
+<symbol id="folder" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2" />
+</symbol>
+<symbol id="file" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M14 3v4a1 1 0 0 0 1 1h4" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M9 17h6" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M9 13h6" />
+</symbol>
+<symbol id="check" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M5 12l5 5l10 -10" />
+</symbol>
+<symbol id="chevron" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M9 6l6 6l-6 6" />
+</symbol>
+<symbol id="plus" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M12 5l0 14" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M5 12l14 0" />
+</symbol>
+<symbol id="spark" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6" />
+</symbol>
+<symbol id="wallet" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M20 12v4h-4a2 2 0 0 1 0 -4h4" />
+</symbol>
+<symbol id="users" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M16 3.13a4 4 0 0 1 0 7.75" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+</symbol>
+<symbol id="clock" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M12 7v5l3 3" />
+</symbol>
+<symbol id="chat" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1" />
+</symbol>
+<symbol id="reset" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" />
+</symbol>
+<symbol id="shield" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M15 19l2 2l4 -4" />
+</symbol>
+<symbol id="briefcase" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M12 12l0 .01" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M3 13a20 20 0 0 0 18 0" />
+</symbol>
+<symbol id="download" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M7 11l5 5l5 -5" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M12 4l0 12" />
+</symbol>
+<symbol id="search" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M21 21l-6 -6" />
+</symbol>
+<symbol id="settings" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+</symbol>
+<symbol id="link" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M9 15l6 -6" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+</symbol>
+<symbol id="info" viewBox="0 0 24 24"><path xmlns="http://www.w3.org/2000/svg" d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M12 9h.01" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M11 12h1v4h1" />
+</symbol>
+</svg>
