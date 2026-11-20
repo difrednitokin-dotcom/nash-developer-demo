@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="Демонстрационный интерфейс Nash Developer: заявка, техническое задание, команда и выполнение проекта.">
+<meta name="robots" content="noindex,nofollow">
+<title>Заказы · Nash Developer</title>
+<link rel="icon" href="assets/brand/favicon.ico?v=mark2" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+<link rel="icon" href="assets/brand/favicon.svg?v=mark2" type="image/svg+xml" sizes="any">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png?v=mark2" sizes="180x180">
+<script src="scripts/theme.js">
+</script>
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/pages.css">
+<link rel="stylesheet" href="styles/responsive.css">
+<link rel="stylesheet" href="styles/ui.css">
+<link rel="stylesheet" href="styles/hero-grid.css">
+<link rel="stylesheet" href="styles/intake-demo.css">
+<script src="scripts/demo-state.js" defer>
+</script>
+<script src="scripts/ui.js" defer>
+</script>
+<script src="scripts/app.js" defer>
+</script>
+<script src="scripts/motion.js" defer>
+</script>
+<script src="scripts/hero-grid.js" defer>
+</script>
+<script src="scripts/intake-demo.js" defer>
+</script>
+</head>
+<body data-page="admin">
+<a class="skip-link" href="#main">К содержимому</a>
+<div class="app-layout">
+<div class="menu-backdrop" data-close-sidebar hidden>
+</div>
+<aside class="app-sidebar" id="app-sidebar" aria-label="Меню кабинета">
+<a class="brand" href="index.html" aria-label="Nash Developer — главная">
+<img class="brand-symbol" src="assets/brand/nd-symbol.svg?v=mark2" alt="" width="30" height="30">
+<span class="brand-name">Nash <span>Developer</span>
+</span>
+</a>
+<button class="icon-btn sidebar-close" data-close-sidebar aria-label="Закрыть меню">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#close"/>
+</svg>
+</button>
+<a class="btn btn-outline" href="request.html">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#plus"/>
+</svg>Создать заявку</a>
+<nav class="sidebar-section" aria-label="Разделы кабинета">
+<span class="sidebar-label">РАБОЧЕЕ ПРОСТРАНСТВО</span>
+<a class="nav-item" href="admin.html" aria-current="page">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#folder"/>
+</svg>
+<span>Заказы</span>
+</a>
+<a class="nav-item" href="admin.html#queue">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#clock"/>
+</svg>
+<span>Очередь решений</span>
+</a>
+<a class="nav-item" href="admin.html#team">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#users"/>
+</svg>
+<span>Исполнители</span>
+</a>
+<a class="nav-item" href="admin.html#payments">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#wallet"/>
+</svg>
+<span>Оплаты и выплаты</span>
+</a>
+</nav>
+<nav class="sidebar-section" aria-label="Дополнительно">
+<span class="sidebar-label">ПЛАТФОРМА</span>
+<a class="nav-item" href="index.html">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#grid"/>
+</svg>
+<span>Главная</span>
+</a>
+<a class="nav-item" href="ui-kit.html">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#settings"/>
+</svg>
+<span>Дизайн-система</span>
+</a>
+</nav>
+<div class="sidebar-bottom">
+<div class="sidebar-note">
+<strong>Пространство для показа</strong>Один проект, три роли и весь путь заказа.<button class="btn btn-quiet btn-wide spacer-top" data-action="reset">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#reset"/>
+</svg>Сбросить демо</button>
+</div>
+<div class="row">
+<span class="avatar avatar-photo" data-demo-avatar role="img" aria-label="Демо-аватар администратора">
+<span class="avatar-fallback" aria-hidden="true">ND</span>
+<img class="avatar-image" src="assets/avatars/evilrabbit.png" alt="" width="36" height="36" decoding="async">
+</span>
+<div class="user-details">
+<strong>Команда ND</strong>
+<small>Администратор</small>
+</div>
+</div>
+</div>
+</aside>
+<header class="app-header">
+<button class="icon-btn mobile-menu-trigger" data-menu="sidebar" aria-label="Открыть меню" aria-expanded="false" aria-controls="app-sidebar">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#menu"/>
+</svg>
+</button>
+<div class="breadcrumbs">
+<a href="index.html">Рабочее пространство</a>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#chevron"/>
+</svg>
+<span>Заказы</span>
+</div>
+<div class="app-header-actions">
+<button class="icon-btn theme-toggle" data-theme-toggle aria-label="Включить светлую тему" aria-pressed="false" title="Включить светлую тему">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#spark"/>
+</svg>
+</button>
+<span class="badge">Демо</span>
+<label class="role-picker">
+<span>Смотреть как</span>
+<select class="select" id="role-picker" aria-label="Демонстрационная роль">
+<option value="customer">Заказчик</option>
+<option value="contractor">Исполнитель</option>
+<option value="admin" selected>Администратор</option>
+</select>
+</label>
+<button class="icon-btn header-reset" data-action="reset" aria-label="Сбросить демонстрацию">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#reset"/>
+</svg>
+</button>
+</div>
+</header>
+<main class="app-content" id="main">
+<div class="page-heading">
+<div>
+<h1>Обзор заказов</h1>
+<p>Проекты, команда и решения, которым нужно ваше внимание.</p>
+</div>
+<a href="request.html" class="btn btn-primary">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#plus"/>
+</svg>Создать заявку</a>
+</div>
+<section class="panel empty-state" id="empty-state" hidden>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#folder"/>
+</svg>
+<h2>Здесь начнётся ваш проект</h2>
+<p>Создайте первую заявку или откройте демонстрационный заказ, чтобы посмотреть кабинет в работе.</p>
+<div class="row wrap" style="justify-content:center">
+<a href="request.html" class="btn btn-primary">Создать заявку</a>
+<button class="btn" data-action="example">Открыть пример</button>
+</div>
+</section>
+<div id="project-content">
+<div class="metric-grid metric-grid-money spacer-bottom">
+<article class="metric">
+<div class="metric-label">Активных заказов<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#folder"/>
+</svg>
+</div>
+<div class="metric-value" data-bind="active-orders">1</div>
+<p>В работе платформы</p>
+</article>
+<article class="metric">
+<div class="metric-label">Стоимость заказа<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#wallet"/>
+</svg>
+</div>
+<div class="metric-value num">1 000 000 ₸</div>
+<p>Демонстрационный расчёт</p>
+</article>
+<article class="metric">
+<div class="metric-label">Ожидает решения<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#clock"/>
+</svg>
+</div>
+<div class="metric-value accent" data-bind="decision-count">0</div>
+<p>Действия администратора</p>
+</article>
+</div>
+<div class="content-grid">
+<div class="stack">
+<section class="panel panel-pad">
+<div class="tabs" role="tablist" aria-label="Разделы администратора">
+<button class="tab" role="tab" id="tab-orders" aria-selected="true" aria-controls="panel-orders" data-tab="orders">Все заказы</button>
+<button class="tab" role="tab" id="tab-queue" aria-selected="false" aria-controls="panel-queue" tabindex="-1" data-tab="queue">Решения</button>
+<button class="tab" role="tab" id="tab-team" aria-selected="false" aria-controls="panel-team" tabindex="-1" data-tab="team">Исполнители</button>
+<button class="tab" role="tab" id="tab-payments" aria-selected="false" aria-controls="panel-payments" tabindex="-1" data-tab="payments">Финансы</button>
+</div>
+<section class="tab-panel" id="panel-orders" role="tabpanel" aria-labelledby="tab-orders">
+<div class="table-title">
+<h2>Заказы платформы <span class="badge">1</span>
+</h2>
+<label>
+<span class="sr-only">Поиск заказов</span>
+<input class="input" id="order-search" placeholder="Поиск по заказам…" type="search">
+</label>
+</div>
+<table class="orders-table">
+<thead>
+<tr>
+<th scope="col">Проект</th>
+<th scope="col">Статус</th>
+<th scope="col">Сумма</th>
+<th scope="col">Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr id="order-row">
+<td>
+<strong data-bind="title">Сайт строительной компании</strong>
+<span class="meta">ND-001 · СтройПлюс</span>
+</td>
+<td data-label="Статус">
+<span class="badge badge-blue" data-bind="status">В разработке</span>
+</td>
+<td data-label="Стоимость" class="num">1 000 000 ₸</td>
+<td>
+<button class="btn btn-outline" data-open-tab="queue">Открыть заказ</button>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="muted small" id="search-empty" hidden>Заказов по вашему запросу нет.</p>
+</section>
+<section class="tab-panel" id="panel-queue" role="tabpanel" aria-labelledby="tab-queue" hidden>
+<div class="project-heading">
+<div class="grow">
+<div class="row wrap">
+<span class="mono subtle">ND-001</span>
+<span data-bind="status" class="badge badge-blue badge-dot">В разработке</span>
+</div>
+<h2 data-bind="title">Сайт строительной компании</h2>
+<p data-bind="summary">Сайт компании с услугами, проектами и формой заявки.</p>
+<div class="project-meta">
+<span>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#briefcase"/>
+</svg>СтройПлюс</span>
+<span>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#file"/>
+</svg>ТЗ · версия 1</span>
+<span>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#clock"/>
+</svg>Демонстрационный проект</span>
+</div>
+</div>
+<div class="project-icon">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#folder"/>
+</svg>
+</div>
+</div>
+<div class="notice">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#info"/>
+</svg>
+<p data-bind="admin-guidance">Сейчас команда выполняет задачи. Решений администратора не требуется.</p>
+</div>
+<div class="spacer-top">
+<h3 class="spacer-bottom">История действий</h3>
+<ol class="timeline" data-render="history">
+<li>ТЗ согласовано<p>Заказчик</p>
+</li>
+<li>Исполнитель назначен<p>Администратор</p>
+</li>
+<li>Тестовая оплата подтверждена<p>Администратор</p>
+</li>
+</ol>
+</div>
+</section>
+<section class="tab-panel" id="panel-team" role="tabpanel" aria-labelledby="tab-team" hidden>
+<h3 class="spacer-bottom">Пул исполнителей</h3>
+<div class="panel panel-pad">
+<div class="team-person">
+<span class="avatar avatar-photo" data-demo-avatar role="img" aria-label="Демо-аватар исполнителя">
+<span class="avatar-fallback" aria-hidden="true">АК</span>
+<img class="avatar-image" src="assets/avatars/shadcn.png" alt="" width="36" height="36" decoding="async">
+</span>
+<div class="grow">
+<strong>Алексей Ким</strong>
+<p>Full-stack разработчик · ИП · тестовый профиль</p>
+</div>
+<span class="status-pill">
+<svg class="status-icon is-done" viewBox="0 0 16 16" aria-hidden="true">
+<circle cx="8" cy="8" r="6.5"/>
+<path d="m5 8 2 2 4-4"/>
+</svg>
+<span>В пуле</span>
+</span>
+</div>
+<div class="team-skills">
+<span class="badge">Next.js</span>
+<span class="badge">React</span>
+<span class="badge">TypeScript</span>
+</div>
+<button class="btn btn-primary spacer-top" data-action="assign" data-team-assign>Назначить на проект</button>
+<p class="form-note spacer-top">Назначение доступно на этапе поиска команды.</p>
+</div>
+</section>
+<section class="tab-panel" id="panel-payments" role="tabpanel" aria-labelledby="tab-payments" hidden>
+<h3 class="spacer-bottom">Расчёт по заказу</h3>
+<dl class="definition">
+<dt>Сумма заказа</dt>
+<dd class="num">1 000 000 ₸</dd>
+<dt>Фонд исполнителя · 72%</dt>
+<dd class="num">720 000 ₸</dd>
+<dt>Комиссия ND · 28%</dt>
+<dd class="num">280 000 ₸</dd>
+<dt>Резерв · 5% комиссии</dt>
+<dd class="num">14 000 ₸</dd>
+<dt>Начислено исполнителю</dt>
+<dd data-bind="accrued" class="num">0 ₸</dd>
+<dt>Отмечено выплаченным</dt>
+<dd data-bind="paid" class="num">0 ₸</dd>
+</dl>
+<div class="notice spacer-top">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#info"/>
+</svg>
+<p>Это демонстрационный учёт. Кнопки не проводят банковские платежи.</p>
+</div>
+<button class="btn btn-outline spacer-top" data-action="export">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#download"/>
+</svg>Выгрузить CSV</button>
+</section>
+</section>
+<section class="panel panel-pad">
+<div class="panel-heading">
+<h3>Путь заказа</h3>
+<span class="badge">9 этапов</span>
+</div>
+<div id="order-stages" class="timeline">
+</div>
+</section>
+</div>
+<aside class="order-sidebar">
+<section class="panel panel-pad next-action" id="action-panel">
+<span class="eyebrow">Очередь решений</span>
+<h3>Проект в работе</h3>
+<p>Решений пока не требуется.</p>
+</section>
+<section class="panel panel-pad">
+<div class="panel-heading">
+<h3>Команда проекта</h3>
+</div>
+<div data-render="team">
+<div class="team-person">
+<span class="avatar avatar-photo" data-demo-avatar role="img" aria-label="Демо-аватар исполнителя">
+<span class="avatar-fallback" aria-hidden="true">АК</span>
+<img class="avatar-image" src="assets/avatars/shadcn.png" alt="" width="36" height="36" decoding="async">
+</span>
+<div>
+<strong>Алексей Ким</strong>
+<p>Full-stack разработчик</p>
+</div>
+</div>
+<div class="team-skills">
+<span class="badge">Next.js</span>
+<span class="badge">TypeScript</span>
+</div>
+</div>
+</section>
+<section class="panel panel-pad">
+<div class="panel-heading">
+<h3>Проверить другую роль</h3>
+</div>
+<div class="stack-sm">
+<a class="btn btn-outline" href="customer.html">Кабинет клиента</a>
+<a class="btn btn-outline" href="contractor.html">Кабинет исполнителя</a>
+</div>
+</section>
+</aside>
+</div>
+</div>
+<footer class="app-footnote">
+<span>Демонстрация · тестовые данные и расчёты</span>
+<a href="ui-kit.html">Компоненты и стили ND</a>
+</footer>
+</main>
+</div>
+<div id="toast" class="toast" role="status" hidden>
+</div>
+<dialog id="confirm-dialog" class="modal" aria-labelledby="confirm-title">
+<h2 id="confirm-title">Начать заново?</h2>
+<p id="confirm-copy">
+</p>
+<div class="modal-actions">
+<button class="btn btn-outline" data-dialog="cancel">Отмена</button>
+<button class="btn btn-primary" data-dialog="confirm">Продолжить</button>
+</div>
+</dialog>
+<dialog id="rework-dialog" class="modal" aria-labelledby="rework-title">
+<h2 id="rework-title">Что нужно доработать?</h2>
+<form id="rework-form">
+<label class="sr-only" for="rework-text">Комментарий к доработке</label>
+<textarea class="textarea spacer-top" id="rework-text" required maxlength="1000" placeholder="Опишите, что нужно исправить">
+</textarea>
+<div class="modal-actions">
+<button type="button" class="btn btn-outline" data-close-rework>Отмена</button>
+<button class="btn btn-primary" type="submit">Отправить замечания</button>
+</div>
+</form>
+</dialog>
+<noscript>
+<div class="notice">Для демонстрационных действий включите JavaScript. Страницы и стили доступны без него.</div>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="Демонстрационный интерфейс Nash Developer: заявка, техническое задание, команда и выполнение проекта.">
+<meta name="robots" content="noindex,nofollow">
+<title>Разработка под вашу задачу · Nash Developer</title>
+<link rel="icon" href="assets/brand/favicon.ico?v=mark2" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+<link rel="icon" href="assets/brand/favicon.svg?v=mark2" type="image/svg+xml" sizes="any">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png?v=mark2" sizes="180x180">
+<script src="scripts/theme.js">
+</script>
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/pages.css">
+<link rel="stylesheet" href="styles/responsive.css">
+<link rel="stylesheet" href="styles/ui.css">
+<link rel="stylesheet" href="styles/hero-grid.css">
+<link rel="stylesheet" href="styles/intake-demo.css">
+<script src="scripts/demo-state.js" defer>
+</script>
+<script src="scripts/ui.js" defer>
+</script>
+<script src="scripts/app.js" defer>
+</script>
+<script src="scripts/motion.js" defer>
+</script>
+<script src="scripts/hero-grid.js" defer>
+</script>
+<script src="scripts/intake-demo.js" defer>
+</script>
+</head>
+<body data-page="home">
+<a class="skip-link" href="#main">К содержимому</a>
+<header class="marketing-header">
+<div class="container">
+<a class="brand" href="index.html" aria-label="Nash Developer — главная">
+<img class="brand-symbol" src="assets/brand/nd-symbol.svg?v=mark2" alt="" width="30" height="30">
+<span class="brand-name">Nash <span>Developer</span>
+</span>
+</a>
+<nav class="marketing-nav" aria-label="Основное меню">
+<a href="index.html#process">Как это работает</a>
+<a href="index.html#roles">Возможности</a>
+<a href="ui-kit.html">Дизайн-система</a>
+</nav>
+<div class="header-actions">
+<button class="icon-btn theme-toggle" data-theme-toggle aria-label="Включить светлую тему" aria-pressed="false" title="Включить светлую тему">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#spark"/>
+</svg>
+</button>
+<a class="btn btn-quiet" href="customer.html">Мой кабинет</a>
+<a class="btn btn-primary btn-start" href="request.html">Начать проект</a>
+<button class="icon-btn mobile-menu-trigger" data-menu="marketing" aria-label="Открыть меню" aria-expanded="false" aria-controls="marketing-mobile">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#menu"/>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<nav id="marketing-mobile" class="marketing-mobile-nav" aria-label="Мобильное меню" hidden>
+<a href="index.html#process">Как это работает</a>
+<a href="index.html#roles">Возможности</a>
+<a href="customer.html">Кабинет клиента</a>
+<a href="contractor.html">Кабинет исполнителя</a>
+<a href="admin.html">Кабинет администратора</a>
+<a href="ui-kit.html">Дизайн-система</a>
+</nav>
+<main id="main">
+<section class="hero container" aria-labelledby="hero-title">
+<div class="hero-grid" data-hero-grid aria-hidden="true">
+<svg class="hero-grid-svg" xmlns="http://www.w3.org/2000/svg" focusable="false">
+<defs>
+<pattern id="hero-grid-pattern" width="104" height="104" patternUnits="userSpaceOnUse">
+<path class="hero-grid-fallback" d="M5 0H99L104 5V99L99 104H5L0 99V5Z"/>
+<path class="hero-grid-fallback hero-grid-fallback-junction" d="M0-5 1.5-1.5 5 0 1.5 1.5 0 5-1.5 1.5-5 0-1.5-1.5Z"/>
+</pattern>
+</defs>
+<rect width="100%" height="100%" fill="url(#hero-grid-pattern)"/>
+</svg>
+</div>
+<div class="eyebrow">Nash Developer</div>
+<h1 id="hero-title">Разработка сайтов,<br>
+<span>сервисов и приложений.</span>
+</h1>
+<p class="hero-description">Опишите задачу, согласуйте техническое задание и следите за работой команды в своём кабинете.</p>
+<form class="hero-composer" id="hero-form">
+<label class="sr-only" for="hero-request">Что вы хотите разработать?</label>
+<textarea id="hero-request" maxlength="8000" placeholder="Например, сайт для строительной компании с каталогом проектов">
+</textarea>
+<div class="composer-bottom">
+<span class="meta">Какую задачу решаем?</span>
+<button class="btn btn-primary btn-start" type="submit">Начать проект</button>
+</div>
+</form>
+<div class="suggestions" aria-label="Примеры задач">
+<button class="suggestion" data-prompt="Нужен сайт для строительной компании">Сайт компании</button>
+<button class="suggestion" data-prompt="Нужен веб-сервис для работы с заявками">Веб-сервис</button>
+<button class="suggestion" data-prompt="Нужно приложение для клиентов компании">Приложение</button>
+<button class="suggestion" data-prompt="Нужен Telegram-бот для записи на услуги">Telegram-бот</button>
+</div>
+<p class="hero-caption">Черновик ТЗ → команда → разработка → приёмка</p>
+<div class="preview-stage">
+<div class="product-preview" aria-label="Пример интерфейса проекта">
+<div class="preview-top">
+<div class="row">
+<span>Рабочее пространство ND</span>
+</div>
+<span>Демонстрационный проект</span>
+</div>
+<div class="preview-layout">
+<div class="preview-nav">
+<a class="brand" href="index.html" aria-label="Nash Developer — главная">
+<img class="brand-symbol" src="assets/brand/nd-symbol.svg?v=mark2" alt="" width="30" height="30">
+<span class="brand-name">Nash <span>Developer</span>
+</span>
+</a>
+<div class="nav-item">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#grid"/>
+</svg>Обзор</div>
+<div class="nav-item" aria-current="page">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#folder"/>
+</svg>Мои проекты</div>
+<div class="nav-item">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#file"/>
+</svg>Документы</div>
+</div>
+<div class="preview-content">
+<div class="preview-title">
+<div>
+<span class="meta">ND-001 · СтройПлюс</span>
+<h2 style="margin-top:8px">Сайт строительной компании</h2>
+</div>
+<span class="status-pill">
+<svg class="status-icon is-active" viewBox="0 0 16 16" aria-hidden="true">
+<circle cx="8" cy="8" r="5.5" stroke-dasharray="1.8 2.5"/>
+</svg>
+<span>В разработке</span>
+</span>
+</div>
+<div class="preview-columns">
+<div>
+<div class="progress-summary">
+<span>Готовность проекта</span>
+<span>1 из 3 задач</span>
+</div>
+<div class="progress" style="--progress:33.33%">
+<span>
+</span>
+</div>
+<div class="task-row">
+<span class="task-symbol done">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#check"/>
+</svg>
+</span>
+<span class="task-title">Макет и структура страниц</span>
+<span class="status-pill">
+<svg class="status-icon is-done" viewBox="0 0 16 16" aria-hidden="true">
+<circle cx="8" cy="8" r="6.5"/>
+<path d="m5 8 2 2 4-4"/>
+</svg>
+<span>Готово</span>
+</span>
+</div>
+<div class="task-row">
+<span class="task-symbol doing">
+</span>
+<span class="task-title">Страницы сайта и форма заявки</span>
+<span class="status-pill">
+<svg class="status-icon is-active" viewBox="0 0 16 16" aria-hidden="true">
+<circle cx="8" cy="8" r="5.5" stroke-dasharray="1.8 2.5"/>
+</svg>
+<span>В работе</span>
+</span>
+</div>
+<div class="task-row">
+<span class="task-symbol ">
+</span>
+<span class="task-title">Проверка и подготовка к запуску</span>
+<span class="status-pill">
+<svg class="status-icon" viewBox="0 0 16 16" aria-hidden="true">
+<circle cx="8" cy="8" r="5.5"/>
+</svg>
+<span>К работе</span>
+</span>
+</div>
+</div>
+<div class="preview-details">
+<div>
+<span class="meta">Исполнитель</span>
+<strong>Алексей Ким</strong>
+</div>
+<div>
+<span class="meta">Стоимость проекта</span>
+<strong class="num">1 000 000 ₸</strong>
+</div>
+<div>
+<a class="btn btn-outline" href="customer.html?example=1">Открыть пример</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="marketing-section container" id="process">
+<div class="section-heading">
+<h2>Как проходит проект</h2>
+<p class="muted">Каждый этап виден в вашем кабинете. Вы всегда знаете, что происходит и чей следующий шаг.</p>
+</div>
+<div class="three-column">
+<article class="step-card">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#chat"/>
+</svg>
+<h3>Расскажите об идее</h3>
+<p>Опишите задачу своими словами. Помощник соберёт детали и подготовит черновик технического задания.</p>
+</article>
+<article class="step-card">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#file"/>
+</svg>
+<h3>Согласуйте план</h3>
+<p>Проверьте состав работ, оценку и команду. Всё важное остаётся в одном документе.</p>
+</article>
+<article class="step-card">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#check"/>
+</svg>
+<h3>Следите за результатом</h3>
+<p>Смотрите задачи и историю проекта. Проверяйте готовую работу и отправляйте замечания.</p>
+</article>
+</div>
+</section>
+<section class="marketing-section container intake-demo" id="conversation" data-intake-demo aria-labelledby="intake-title">
+  <div class="section-heading">
+    <h2 id="intake-title">Из диалога —<br>в задачи проекта.</h2>
+    <div class="intake-intro">
+      <p class="muted">Клиент описывает задачу, помощник уточняет детали. После согласования задача появляется в плане разработки.</p>
+      <a class="intake-try-link" href="request.html">Обсудить свою задачу <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#chevron"/>
+</svg>
+</a>
+    </div>
+  </div>
+  <p class="sr-only">Пример: заказчик просит сайт строительной компании с услугами, проектами и формой заявки. Помощник уточняет уведомления в Telegram. После подтверждения клиента в колонку «К работе» добавляется задача «Форма заявки и уведомления в Telegram», сдвигая прежние задачи вниз.</p>
+  <div class="intake-scene" aria-hidden="true">
+    <div class="intake-board">
+      <div class="intake-board-header">
+<span>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#folder"/>
+</svg> СтройПлюс <span class="intake-slash">/</span> Задачи проекта</span>
+<span class="intake-total">
+<span data-intake-total>5</span> задач</span>
+</div>
+      <div class="intake-board-body">
+        <div class="intake-lane">
+          <div class="intake-lane-heading">
+<span>
+<i class="intake-state-dot">
+</i>К работе</span>
+<span data-intake-todo>4</span>
+</div>
+          <div class="intake-task-slot" data-intake-slot>
+<div class="intake-new-inner" data-intake-inner>
+            <article class="intake-task intake-task-new" data-intake-new>
+              <div class="intake-task-top">
+<span class="mono">ND-021</span>
+<span class="intake-new-label">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#check"/>
+</svg> Новая задача</span>
+</div>
+              <h3>Форма заявки и уведомления в Telegram</h3>
+              <div class="intake-task-footer">
+<span>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#chat"/>
+</svg> Из диалога с клиентом</span>
+<img src="assets/brand/nd-symbol.svg?v=mark2" width="16" height="16" alt="">
+</div>
+            </article>
+          </div>
+</div>
+          <div class="intake-old-tasks">
+            <article class="intake-task" data-intake-old>
+<div class="intake-task-top">
+<span class="mono">ND-019</span>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#clock"/>
+</svg>
+</div>
+<h3>Каталог выполненных проектов</h3>
+<div class="intake-task-footer">
+<span>Сайт компании</span>
+<span class="intake-task-ring">
+</span>
+</div>
+</article>
+            <article class="intake-task" data-intake-old>
+<div class="intake-task-top">
+<span class="mono">ND-020</span>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#clock"/>
+</svg>
+</div>
+<h3>Адаптация для телефона</h3>
+<div class="intake-task-footer">
+<span>Интерфейс</span>
+<span class="intake-task-ring">
+</span>
+</div>
+</article>
+            <article class="intake-task" data-intake-old>
+<div class="intake-task-top">
+<span class="mono">ND-022</span>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#clock"/>
+</svg>
+</div>
+<h3>Проверка страниц и контактов</h3>
+<div class="intake-task-footer">
+<span>Проверка</span>
+<span class="intake-task-ring">
+</span>
+</div>
+</article>
+          </div>
+        </div>
+        <div class="intake-lane intake-lane-doing">
+          <div class="intake-lane-heading">
+<span>
+<i class="intake-state-dot is-active">
+</i>В работе</span>
+<span>1</span>
+</div>
+          <article class="intake-task">
+<div class="intake-task-top">
+<span class="mono">ND-018</span>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#clock"/>
+</svg>
+</div>
+<h3>Структура и макеты страниц</h3>
+<div class="intake-task-footer">
+<span>Дизайн</span>
+<span class="avatar avatar-photo" data-demo-avatar role="img" aria-label="Демо-аватар заказчика">
+<span class="avatar-fallback" aria-hidden="true">ДС</span>
+<img class="avatar-image" src="assets/avatars/maxleiter.png" alt="" width="36" height="36" decoding="async">
+</span>
+</div>
+</article>
+          <div class="intake-board-note">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#file"/>
+</svg> Техническое задание согласовано</div>
+        </div>
+      </div>
+    </div>
+    <div class="intake-board-fade">
+</div>
+    <div class="intake-chat">
+      <div class="intake-chat-header">
+<span class="intake-ai-avatar">
+<img src="assets/brand/nd-symbol.svg?v=mark2" width="22" height="22" alt="">
+</span>
+<div>
+<h3>Помощник ND</h3>
+<p>СтройПлюс · новый проект</p>
+</div>
+<span class="intake-chat-label">Пример диалога</span>
+</div>
+      <div class="intake-messages" data-intake-log>
+        <div class="intake-message" data-intake-message>
+<span class="avatar avatar-photo" data-demo-avatar role="img" aria-label="Демо-аватар заказчика">
+<span class="avatar-fallback" aria-hidden="true">ДС</span>
+<img class="avatar-image" src="assets/avatars/maxleiter.png" alt="" width="36" height="36" decoding="async">
+</span>
+<div>
+<span class="intake-speaker">Данияр <span>Заказчик</span>
+</span>
+<p>Нужен сайт для строительной компании.</p>
+</div>
+</div>
+        <div class="intake-message" data-intake-message>
+<span class="intake-ai-avatar">
+<img src="assets/brand/nd-symbol.svg?v=mark2" width="18" height="18" alt="">
+</span>
+<div>
+<span class="intake-speaker">Помощник ND</span>
+<p>Что должен уметь сайт в первой версии?</p>
+</div>
+</div>
+        <div class="intake-message" data-intake-message>
+<span class="avatar avatar-photo" data-demo-avatar role="img" aria-label="Демо-аватар заказчика">
+<span class="avatar-fallback" aria-hidden="true">ДС</span>
+<img class="avatar-image" src="assets/avatars/maxleiter.png" alt="" width="36" height="36" decoding="async">
+</span>
+<div>
+<span class="intake-speaker">Данияр</span>
+<p>Показывать услуги и проекты. Нужна форма заявки.</p>
+</div>
+</div>
+        <div class="intake-message" data-intake-message>
+<span class="intake-ai-avatar">
+<img src="assets/brand/nd-symbol.svg?v=mark2" width="18" height="18" alt="">
+</span>
+<div>
+<span class="intake-speaker">Помощник ND</span>
+<p>Добавим уведомление менеджеру в Telegram после каждой заявки?</p>
+</div>
+</div>
+        <div class="intake-message" data-intake-message>
+<span class="avatar avatar-photo" data-demo-avatar role="img" aria-label="Демо-аватар заказчика">
+<span class="avatar-fallback" aria-hidden="true">ДС</span>
+<img class="avatar-image" src="assets/avatars/maxleiter.png" alt="" width="36" height="36" decoding="async">
+</span>
+<div>
+<span class="intake-speaker">Данияр</span>
+<p>Да, добавьте в план.</p>
+</div>
+</div>
+        <div class="intake-message" data-intake-message>
+<span class="intake-ai-avatar">
+<img src="assets/brand/nd-symbol.svg?v=mark2" width="18" height="18" alt="">
+</span>
+<div>
+<span class="intake-speaker">Помощник ND</span>
+<p>Готово. Задача «Форма заявки и уведомления в Telegram» добавлена в проект.</p>
+<span class="intake-created-note">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#check"/>
+</svg> Задача в плане</span>
+</div>
+</div>
+        <div class="intake-message intake-typing" data-intake-typing hidden>
+<span class="intake-ai-avatar">
+<img src="assets/brand/nd-symbol.svg?v=mark2" width="18" height="18" alt="">
+</span>
+<div>
+<span class="intake-speaker">Помощник ND</span>
+<span class="intake-dots">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</span>
+</div>
+</div>
+      </div>
+      <div class="intake-compose">
+<span class="intake-compose-copy" data-intake-draft>Расскажите о задаче…</span>
+<div class="intake-compose-tools">
+<span>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#plus"/>
+</svg>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#file"/>
+</svg>
+</span>
+<span class="intake-send" data-intake-send>
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M5 12h14m-6-6 6 6-6 6"/>
+</svg>
+</span>
+</div>
+</div>
+    </div>
+    <div class="intake-transfer" data-intake-transfer hidden>
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#file"/>
+</svg>
+</div>
+  </div>
+  <div class="intake-caption">
+<p>
+<span class="intake-caption-label">Демонстрационный сценарий</span>
+<span class="intake-phase" data-intake-phase>Задача в плане</span>
+</p>
+<div class="intake-controls" data-intake-controls hidden>
+<button class="btn btn-quiet" type="button" data-intake-pause aria-label="Приостановить демонстрацию" aria-pressed="false">
+<span class="intake-control-icon" data-intake-control-icon>
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M8 5v14M16 5v14"/>
+</svg>
+</span>
+<span data-intake-pause-label>Пауза</span>
+</button>
+<button class="icon-btn" type="button" data-intake-replay aria-label="Повторить демонстрацию" title="Повторить демонстрацию">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#reset"/>
+</svg>
+</button>
+</div>
+</div>
+</section>
+
+<section class="marketing-section container" id="roles">
+<div class="section-heading">
+<h2>Три роли в проекте</h2>
+<p class="muted">Посмотрите на проект глазами клиента, исполнителя и команды платформы.</p>
+</div>
+<div class="three-column">
+<article class="role-card">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#briefcase"/>
+</svg>
+<h3>Для заказчика</h3>
+<p>Техническое задание, статус, команда и приёмка результата.</p>
+<a class="btn btn-outline" href="customer.html?example=1">Кабинет клиента</a>
+</article>
+<article class="role-card">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#check"/>
+</svg>
+<h3>Для исполнителя</h3>
+<p>Назначенные проекты, задачи и собственные начисления.</p>
+<a class="btn btn-outline" href="contractor.html?example=1">Кабинет исполнителя</a>
+</article>
+<article class="role-card">
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<use href="assets/icons/tabler-sprite.svg#grid"/>
+</svg>
+<h3>Для команды ND</h3>
+<p>Заказы, подбор команды, подтверждение оплат и выплаты.</p>
+<a class="btn btn-outline" href="admin.html?example=1">Кабинет администратора</a>
+</article>
+</div>
+</section>
+</main>
+<footer class="marketing-footer">
+<div class="container">
+<a class="brand" href="index.html" aria-label="Nash Developer — главная">
+<img class="brand-symbol" src="assets/brand/nd-symbol.svg?v=mark2" alt="" width="30" height="30">
+<span class="brand-name">Nash <span>Developer</span>
+</span>
+</a>
+<nav class="footer-links" aria-label="Ссылки в подвале">
+<a href="request.html">Обсудить проект</a>
+<a href="ui-kit.html">Дизайн-система</a>
+<button class="btn btn-quiet" data-action="reset">Сбросить демо</button>
+</nav>
+<p class="meta">Демонстрационная версия · 2026</p>
+</div>
+</footer>
+<div id="toast" class="toast" role="status" hidden>
+</div>
+<dialog id="confirm-dialog" class="modal" aria-labelledby="confirm-title">
+<h2 id="confirm-title">Начать заново?</h2>
+<p id="confirm-copy">
+</p>
+<div class="modal-actions">
+<button class="btn btn-outline" data-dialog="cancel">Отмена</button>
+<button class="btn btn-primary" data-dialog="confirm">Продолжить</button>
+</div>
+</dialog>
+<dialog id="rework-dialog" class="modal" aria-labelledby="rework-title">
+<h2 id="rework-title">Что нужно доработать?</h2>
+<form id="rework-form">
+<label class="sr-only" for="rework-text">Комментарий к доработке</label>
+<textarea class="textarea spacer-top" id="rework-text" required maxlength="1000" placeholder="Опишите, что нужно исправить">
+</textarea>
+<div class="modal-actions">
+<button type="button" class="btn btn-outline" data-close-rework>Отмена</button>
+<button class="btn btn-primary" type="submit">Отправить замечания</button>
+</div>
+</form>
+</dialog>
+<noscript>
+<div class="notice">Для демонстрационных действий включите JavaScript. Страницы и стили доступны без него.</div>
+</noscript>
+</body>
+</html>
