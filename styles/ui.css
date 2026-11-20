@@ -1,0 +1,86 @@
+/* Compact statuses: colour belongs to the small symbol, not the whole badge. */
+.status-pill { display:inline-flex; align-items:center; gap:5px; padding:2px 7px; min-height:23px; max-width:100%; border:1px solid var(--border); border-radius:999px; background:transparent; color:var(--foreground); font-size:.75rem; font-weight:400; line-height:1.4; white-space:nowrap; vertical-align:middle; }
+.status-icon { display:block; width:13px; height:13px; flex:0 0 13px; fill:none; stroke:var(--subtle); stroke-width:1.3; }
+.status-icon.is-active { stroke:var(--muted); }
+.status-icon.is-done { stroke:none; fill:var(--status-success); }
+.status-icon.is-done path { fill:none; stroke:var(--status-check); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.order-status { display:inline-flex; max-width:100%; }
+.task-symbol { width:19px; height:19px; flex-basis:19px; }
+.task-symbol.done { background:transparent; border-color:var(--border-strong); color:var(--muted); }
+.task-symbol.doing { border:1px dashed var(--muted); color:var(--muted); }
+
+/* Native select is kept solely as a value source and non-JS fallback. */
+.custom-select { display:inline-flex; min-width:0; width:100%; vertical-align:middle; }
+.select-trigger { display:inline-flex; align-items:center; justify-content:space-between; gap:12px; text-align:left; background-image:none; padding-right:12px; cursor:pointer; }
+.select-trigger:hover:not(:disabled) { background-color:var(--surface-raised); border-color:var(--border-strong); }
+.select-trigger[aria-expanded="true"] { border-color:var(--border-strong); background-color:var(--surface-raised); }
+.select-value { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.select-chevron { width:14px; height:14px; flex:0 0 14px; fill:none; stroke:var(--subtle); stroke-width:1.5; transition:transform .16s ease; }
+.select-trigger[aria-expanded="true"] .select-chevron { transform:rotate(180deg); }
+.role-picker .custom-select { width:auto; }
+.role-picker .select-trigger { min-height:44px; }
+.task-row .task-status-select { flex:0 0 auto; width:auto; max-width:100%; margin-left:0; }
+.task-row .task-status-select .select, .board-task .task-status-select .select { width:auto; max-width:100%; margin:0; padding:0; min-height:44px; border:0; background:transparent; font-size:.75rem; }
+.status-select-trigger { gap:0; }
+.status-select-trigger .status-pill { border-radius:999px 0 0 999px; border-right:0; padding-right:3px; }
+.status-select-trigger > .select-chevron { height:23px; width:22px; padding:4px; border:1px solid var(--border); border-left:0; border-radius:0 999px 999px 0; }
+.status-select-trigger:hover .status-pill, .status-select-trigger:hover > .select-chevron,
+.status-select-trigger[aria-expanded="true"] .status-pill, .status-select-trigger[aria-expanded="true"] > .select-chevron { background:var(--surface-hover); border-color:var(--border-strong); }
+.status-select-trigger[aria-expanded="true"] > .select-chevron { transform:none; }
+.select-popover { position:fixed; z-index:120; margin:0; padding:5px; overflow-y:auto; overscroll-behavior:contain; touch-action:pan-y; background:linear-gradient(155deg,var(--surface-raised),var(--surface) 70%); border:1px solid var(--border-strong); border-radius:10px; box-shadow:0 12px 40px var(--menu-shadow),0 0 0 1px var(--background); animation:menu-in .13s ease-out; }
+.select-option { display:flex; align-items:center; gap:10px; min-height:44px; padding:9px 10px; border-radius:6px; color:var(--foreground); font-size:.875rem; line-height:1.4; cursor:pointer; }
+.select-option > .icon { width:17px; height:17px; color:var(--muted); }
+.select-option .status-icon { width:14px; height:14px; flex-basis:14px; }
+.select-option[aria-selected="true"] { background:var(--surface-hover); }
+.select-option.is-highlighted { background:var(--surface-hover); outline:1px solid var(--border); outline-offset:-1px; }
+.select-option[aria-disabled="true"] { opacity:.4; cursor:not-allowed; }
+.option-check { display:grid; place-items:center; width:17px; height:17px; margin-left:auto; }
+.option-check .icon { width:15px; height:15px; }
+@keyframes menu-in { from { opacity:0; transform:translateY(-3px) scale(.985); } to { opacity:1; transform:none; } }
+
+/* Neutral lighting lives behind the marketing content, never over its text. */
+:root { --status-success:#35d68a; --status-check:#082518; --menu-shadow:#0008; --stage-light:#c0c7d366; --section-light:#bbc4d40b; --edge-light:#ffffff26; --preview-shadow:#0007; }
+:root[data-theme="light"] { --status-success:#168453; --status-check:#ffffff; --menu-shadow:#18202b1f; --stage-light:#8d9ab82e; --section-light:#b6c0d418; --edge-light:#b6bdcc80; --preview-shadow:#71809926; }
+.btn-start, .marketing-header .header-actions > .btn-start { position:relative; min-height:32px; padding:6px 14px; border-radius:999px; font-size:.8125rem; font-weight:500; line-height:18px; }
+/* A 32 px visual pill keeps a 44 px hit area without becoming visually bulky. */
+.btn-start::after { content:""; position:absolute; inset:-6px 0; border-radius:inherit; }
+.hero > .eyebrow { display:flex; width:max-content; max-width:100%; margin-inline:auto; justify-content:center; }
+.hero h1,.hero-description { margin-inline:auto; text-align:center; }
+.hero-composer { margin-inline:auto; }
+.hero > .suggestions,.hero-caption { justify-content:center; }
+.hero-caption { text-align:center; }
+@media (min-width:1200px) {
+  .marketing-header > .container { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); }
+  .marketing-header .brand { justify-self:start; }
+  .marketing-header .header-actions { justify-self:end; }
+}
+body[data-page="home"] main { overflow:clip; }
+.hero { position:relative; isolation:isolate; }
+.preview-stage { position:relative; isolation:isolate; margin-top:40px; padding:32px 0 128px; }
+.preview-stage::before { content:""; position:absolute; z-index:-1; pointer-events:none; inset-block:0; left:calc(50% - 50vw); width:100vw; background:radial-gradient(ellipse 70% 85% at 50% 68%,var(--stage-light),transparent 90%); mask-image:linear-gradient(to bottom,transparent,#000 16%,#000 68%,transparent 100%); }
+.hero .product-preview { position:relative; margin-top:0; background:linear-gradient(135deg,var(--surface-raised),var(--surface) 55%); border-color:var(--border-strong); box-shadow:0 1px 0 var(--edge-light) inset,0 26px 54px var(--preview-shadow); }
+.marketing-section { position:relative; isolation:isolate; }
+.marketing-section::before { content:""; position:absolute; pointer-events:none; z-index:-1; left:calc(50% - 50vw); width:100vw; inset-block:0; background:radial-gradient(ellipse 70% 95% at 15% 0%,var(--section-light),transparent 80%); }
+.marketing-section#roles::before { background:radial-gradient(ellipse 80% 90% at 90% 30%,var(--section-light),transparent 75%); }
+.marketing-section::after { content:""; position:absolute; pointer-events:none; top:0; left:calc(50% - 50vw); width:100vw; height:1px; background:linear-gradient(90deg,transparent,var(--edge-light),transparent); }
+.marketing-section#process::after { display:none; }
+.marketing-section#process::before { mask-image:linear-gradient(to bottom,transparent,#000 25%); }
+.marketing-section + .marketing-section { border-top:0; }
+.role-card { background:linear-gradient(145deg,var(--surface-raised),var(--surface) 70%); box-shadow:0 1px 0 #ffffff05 inset; }
+@keyframes hero-in { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+@keyframes preview-in { from { opacity:0; transform:translateY(20px) scale(.985); } to { opacity:1; transform:none; } }
+.hero-enter { animation:hero-in .65s cubic-bezier(.22,1,.36,1) var(--enter-delay,0ms) both; }
+.hero-enter:focus-within { animation:none; }
+.preview-enter { animation:preview-in .8s cubic-bezier(.22,1,.36,1) .18s both; }
+.scroll-reveal { transition:opacity .65s ease,transform .75s cubic-bezier(.22,1,.36,1); }
+.reveal-pending { opacity:0; transform:translateY(18px); }
+.reveal-pending:focus-within { opacity:1; transform:none; }
+@media (max-width:767px) {
+  .preview-stage { margin-top:28px; padding:24px 0 80px; }
+  .preview-stage::before { background:radial-gradient(ellipse 105% 80% at 50% 65%,var(--stage-light),transparent 95%); }
+  .task-row > .status-pill { margin-left:0; }
+  .select-option { min-height:46px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .hero-enter,.preview-enter,.scroll-reveal,.select-popover { animation:none!important; transition:none!important; opacity:1!important; transform:none!important; }
+}
